@@ -73,3 +73,8 @@ li.active {
   color: #ddd;
   font-weight: bold;
 }
+img.icon_play,
+img.icon_pause,
+img.icon_clear {
+  width: 80%;
+}

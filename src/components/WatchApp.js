@@ -21,28 +21,40 @@ export default class WatchApp extends React.Component {
   }
 
   render() {
-    const { timerId, moveTimer, clearTimer, timeOver } = this.props
+    const {
+      timerId,
+      moveStartTimer,
+      moveStopTimer,
+      clearTimer,
+      timeOver
+    } = this.props
     return (
       <div className={timeOver ? 'App over' : 'App'}>
         <div className="display">{this.displayTime()}</div>
         <div className="button">
-          <button
-            onClick={() => {
-              moveTimer()
-            }}
-          >
-            {timerId ? (
-              <i className="fas fa-pause" />
-            ) : (
-              <i className="fas fa-play" />
-            )}
-          </button>
+          {timerId ? (
+            <button
+              onClick={() => {
+                moveStopTimer()
+              }}
+            >
+              <img src="images/icon_pause.svg" className="icon_pause" />
+            </button>
+          ) : (
+            <button
+              onClick={() => {
+                moveStartTimer()
+              }}
+            >
+              <img src="images/icon_play.svg" className="icon_play" />
+            </button>
+          )}
           <button
             onClick={() => {
               clearTimer()
             }}
           >
-            <i className="fas fa-undo" />
+            <img src="images/icon_clear.svg" className="icon_clear" />
           </button>
         </div>
         <SetTime />

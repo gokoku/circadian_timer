@@ -36,19 +36,22 @@ export const timeOverTime = result => {
     }
   }
 }
-export const moveTimer = () => {
+
+export const moveStartTimer = () => {
+  return (dispatch, getState) => {
+    const id = setInterval(() => {
+      dispatch(checkTimer())
+      dispatch(incrementCounter())
+    }, 1000)
+    dispatch(startTimer(id))
+  }
+}
+
+export const moveStopTimer = () => {
   return (dispatch, getState) => {
     const { timerId } = getState()
-    if (timerId) {
-      clearInterval(timerId)
-      dispatch(stopTimer())
-    } else {
-      const id = setInterval(() => {
-        dispatch(checkTimer())
-        dispatch(incrementCounter())
-      }, 1000)
-      dispatch(startTimer(id))
-    }
+    clearInterval(timerId)
+    dispatch(stopTimer())
   }
 }
 

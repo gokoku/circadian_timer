@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import WatchApp from '../components/WatchApp'
-import { moveTimer, clearTimer } from '../actions'
+import { moveStartTimer, moveStopTimer, clearTimer } from '../actions'
 
 function mapStateToProps({ timeOver, timerCounter, timerId }) {
   return {
@@ -12,8 +12,11 @@ function mapStateToProps({ timeOver, timerCounter, timerId }) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    moveTimer() {
-      dispatch(moveTimer())
+    moveStartTimer() {
+      dispatch(moveStartTimer())
+    },
+    moveStopTimer() {
+      dispatch(moveStopTimer())
     },
     clearTimer() {
       dispatch(clearTimer())
