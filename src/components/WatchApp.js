@@ -38,7 +38,11 @@ export default class WatchApp extends React.Component {
                 moveStopTimer()
               }}
             >
-              <img src="images/icon_pause.svg" className="icon_pause" />
+              <img
+                src="images/icon_pause.svg"
+                className="icon_pause"
+                alt="icon pause"
+              />
             </button>
           ) : (
             <button
@@ -46,7 +50,11 @@ export default class WatchApp extends React.Component {
                 moveStartTimer()
               }}
             >
-              <img src="images/icon_play.svg" className="icon_play" />
+              <img
+                src="images/icon_play.svg"
+                className="icon_play"
+                alt="icon play"
+              />
             </button>
           )}
           <button
@@ -54,7 +62,11 @@ export default class WatchApp extends React.Component {
               clearTimer()
             }}
           >
-            <img src="images/icon_clear.svg" className="icon_clear" />
+            <img
+              src="images/icon_clear.svg"
+              className="icon_clear"
+              alt="icon clear"
+            />
           </button>
         </div>
         <SetTime />
