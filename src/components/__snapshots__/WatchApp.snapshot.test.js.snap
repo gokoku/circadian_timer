@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`WatchAppコンポーネントのスナップショットテスト 1`] = `
+<div
+  className="App"
+>
+  <div
+    className="display"
+  >
+    <div>
+      <span
+        className="min"
+      >
+        aN
+      </span>
+      <span
+        className="sec"
+      >
+        aN
+      </span>
+    </div>
+  </div>
+  <div
+    className="button"
+  >
+    <button
+      onClick={[Function]}
+    >
+      <img
+        alt="icon play"
+        className="icon_play"
+        src="images/icon_play.svg"
+      />
+    </button>
+    <button
+      onClick={[Function]}
+    >
+      <img
+        alt="icon clear"
+        className="icon_clear"
+        src="images/icon_clear.svg"
+      />
+    </button>
+  </div>
+  <ul>
+    <li
+      className="active"
+      onClick={[Function]}
+    >
+      0
+       min
+    </li>
+    <li
+      onClick={[Function]}
+    >
+      15
+       min
+    </li>
+    <li
+      onClick={[Function]}
+    >
+      30
+       min
+    </li>
+    <li
+      onClick={[Function]}
+    >
+      45
+       min
+    </li>
+  </ul>
+</div>
+`;
